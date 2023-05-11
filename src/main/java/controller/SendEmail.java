@@ -28,7 +28,7 @@ public class SendEmail {
     void sendEmailToTheCustomer(ActionEvent event) throws SQLException, MessagingException {
         int flag=-1;
         String customerEmail="";
-        String Query = "SELECT * FROM Customer WHERE ID = '" + CustomerID.getText() + "'" ;
+        String query = "SELECT * FROM Customer WHERE ID = '" + CustomerID.getText() + "'" ;
 
 
         OracleDataSource orc = new OracleDataSource();
@@ -37,7 +37,7 @@ public class SendEmail {
         orc.setPassword("123123");
         Connection conn = orc.getConnection();
         Statement stm = conn.createStatement();
-        ResultSet rs = stm.executeQuery(Query);
+        ResultSet rs = stm.executeQuery(query);
 //        JOptionPane.showMessageDialog(null,rs.getString(1)+"");
         while (rs.next()){
             if(rs.getString(1).equals(CustomerID.getText()+"")){
