@@ -30,7 +30,7 @@ public class UpdateProduct {
            if (t == 0)
                flag =1;
        }
-       catch (Exception ex) {
+       catch (SQLException ex) {
            Logger.getLogger("You are in update product page");
        }
     }
