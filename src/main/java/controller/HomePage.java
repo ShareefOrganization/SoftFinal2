@@ -29,13 +29,13 @@ public class HomePage {
     int managerid;
 
     @FXML
-    public BorderPane HomePagePane;
+    public BorderPane homePagePane;
 
 
     @FXML
-    public Pane HomePane;
+    public Pane homePane;
     @FXML
-    public Label WorkerCountLabel ;
+    public Label workerCountLabel ;
 
     @FXML
     public Label carpetsWorkerCountLabel;
