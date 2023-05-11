@@ -20,7 +20,7 @@ public class DeleteCustomer {
             try (Statement stm = conn.createStatement()) {
                 x = stm.executeUpdate(query);
             }
-        }catch(Exception ex){
+        }catch(SQLException ex){
             Logger.getLogger(ex.toString());
         }
         return x;
