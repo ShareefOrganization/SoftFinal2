@@ -151,12 +151,12 @@ public class HomePage {
 
     }
     @FXML
-    void Add(ActionEvent event) throws IOException {
+    void add(ActionEvent event) throws IOException {
         loadpage("/AddAll");
     }
 
     @FXML
-    void ViewAll(ActionEvent event) throws IOException {
+    void viewAll(ActionEvent event) throws IOException {
         loadpage("/ViewAll");
     }
     @FXML
