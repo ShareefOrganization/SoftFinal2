@@ -20,7 +20,7 @@ public class SendEmail {
     MimeMessage mimeMessage;
 
     @FXML
-    private TextField CustomerID;
+    private TextField customerID;
     @FXML
     private Label errorMessageLabel;
 
@@ -28,7 +28,7 @@ public class SendEmail {
     void sendEmailToTheCustomer(ActionEvent event) throws SQLException, MessagingException {
         int flag=-1;
         String customerEmail="";
-        String query = "SELECT * FROM Customer WHERE ID = '" + CustomerID.getText() + "'" ;
+        String query = "SELECT * FROM Customer WHERE ID = '" + customerID.getText() + "'" ;
 
 
         OracleDataSource orc = new OracleDataSource();
@@ -38,9 +38,9 @@ public class SendEmail {
         Connection conn = orc.getConnection();
         Statement stm = conn.createStatement();
         ResultSet rs = stm.executeQuery(query);
-//        JOptionPane.showMessageDialog(null,rs.getString(1)+"");
+
         while (rs.next()){
-            if(rs.getString(1).equals(CustomerID.getText()+"")){
+            if(rs.getString(1).equals(customerID.getText()+"")){
                 customerEmail=rs.getString(7);
                 flag=1;
             }
