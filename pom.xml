@@ -97,6 +97,10 @@
       <artifactId>ojdbc8</artifactId>
       <version>21.5.0.0</version>
     </dependency>
+    <properties>
+  <sonar.organization>shareeforganization</sonar.organization>
+  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+</properties>
 
   </dependencies>
 </project>
